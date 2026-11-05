@@ -1,0 +1,11 @@
+# Already its own repo
+turtle_bot/
+
+# Python / ROS build artifacts
+.venv/
+__pycache__/
+*.pyc
+build/
+install/
+log/
+.env

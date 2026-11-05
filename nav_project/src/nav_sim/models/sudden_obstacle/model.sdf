@@ -1,0 +1,17 @@
+<?xml version="1.0"?>
+<sdf version="1.8">
+  <!-- C2 的突現障礙：直徑 0.4 m、高 0.5 m 的圓柱，static 所以撞不倒 -->
+  <model name="sudden_obstacle">
+    <static>true</static>
+    <link name="link">
+      <pose>0 0 0.25 0 0 0</pose>
+      <collision name="collision">
+        <geometry><cylinder><radius>0.2</radius><length>0.5</length></cylinder></geometry>
+      </collision>
+      <visual name="visual">
+        <geometry><cylinder><radius>0.2</radius><length>0.5</length></cylinder></geometry>
+        <material><ambient>0.9 0.5 0.1 1</ambient><diffuse>0.9 0.5 0.1 1</diffuse></material>
+      </visual>
+    </link>
+  </model>
+</sdf>

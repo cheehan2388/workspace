@@ -1,0 +1,36 @@
+<?xml version="1.0"?>
+<robot name="first_robot">
+
+  <!-- 零件 1：車身 -->
+  <link name="base_link">
+    <visual>
+      <origin xyz="0 0 0" rpy="0 0 0"/>
+      <geometry>
+        <cylinder radius="0.10" length="0.12"/>
+      </geometry>
+      <material name="white">
+        <color rgba="1.0 1.0 1.0 0.5"/>
+      </material>
+    </visual>
+  </link>
+
+  <!-- 零件 2：光達（先用小方塊代表） -->
+  <link name="lidar_link">
+    <visual>
+      <geometry>
+        <box size="0.05 0.05 0.04"/>
+      </geometry>
+      <material name="red">
+        <color rgba="1.0 0.0 0.0 1.0"/>
+      </material>
+    </visual>
+  </link>
+
+  <!-- 連接：光達固定在車身上方 -->
+  <joint name="lidar_joint" type="fixed">
+    <parent link="base_link"/>
+    <child link="lidar_link"/>
+    <origin xyz="0.0 0.0 0.08" rpy="0 0 0"/>
+  </joint>
+
+</robot>
